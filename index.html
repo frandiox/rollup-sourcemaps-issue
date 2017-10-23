@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <script src="./dist/bundle.js"></script>
+</head>
+<body>
+  <p>Open DevTools and try to set break points.<br><code>source &gt; ctrl+o 'm1.js'</code></p>
+  <p>Looks like the sourcemap does not point to the start of the line (check <code>bundle.js</code> with <a href="https://sokra.github.io/source-map-visualization/" target="_blank">this tool</a>.)</p>
+  <p>Also, from DevTools docs:
+    <blockquote><i>DevTools always pauses before this line of code is executed.</i></blockquote>
+  But here the line itself is executed and then the code is paused.</p>
+
+  <script>
+    console.log(window.test);
+    new window.test.m1();
+  </script>
+</body>
+</html>
