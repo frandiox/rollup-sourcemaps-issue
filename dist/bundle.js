@@ -1,4 +1,4 @@
-/* rollup-sourcemaps-bug v1.0.0 - 2017-10-23 */
+/* rollup-sourcemaps-bug v1.0.0} */
 
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
